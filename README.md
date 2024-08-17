@@ -1,0 +1,1 @@
+- Install PgAdmin https://www.pgadmin.org/download/pgadmin-4-windows/
