@@ -22,7 +22,7 @@ public class ExposeEntityIdRestConfiguration implements RepositoryRestConfigurer
     private Class<?>[] entities() {
         EntityManager entityManager = applicationContext.getBean(EntityManager.class);
         return entityManager.getMetamodel().getEntities().stream()
-                .map( EntityType::getJavaType)
+                .map(EntityType::getJavaType)
                 .filter(this::hasExposeIdAnnotation)
                 .toArray(Class<?>[]::new);
     }
